@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>delete-book</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">id</ion-label>
+    <ion-input [(ngModel)]="id"  name="id" ></ion-input>
+
+  </ion-item>
+  <ion-button   color="primary" (click)="laraveldelete()"> delete</ion-button>
+</ion-content>

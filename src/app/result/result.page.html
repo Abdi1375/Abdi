@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>result</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let twtt of book" (click)="showTwitts()">
+    <ion-card-content>
+      <ion-row>
+      <ion-col size="6">
+          {{twtt.namebook}}
+      </ion-col>
+      <ion-col size="6">
+          {{twtt.criterica}}
+      </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card *ngIf="book==undefined">
+    <ion-card-content>
+      <ion-row>
+        <ion-col size="12">
+          <ion-card-title>لطفا چند لحظه صبر کنید</ion-card-title>
+            احتمالا آیتمی وجود ندارد
+            <br>
+            روی دکمه بازگشت برای جستجوی مجدد کلیک کنید
+            <ion-button (click)="onBackClicked()">بازگشت</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-button color="secondary" fill="outline" [routerLink]="['/login']"> 
+    <ion-icon name="person" slot="start"></ion-icon>
+    Login
+  </ion-button>
+
+<ion-button color="secondary" fill="outline"  [routerLink]="['/register']">
+  <ion-icon name="person" slot="start"></ion-icon>
+  Register
+</ion-button>
+ 
+</ion-content>
+<ion-footer>
+  
+  <ion-fab vertical="bottom" horizontal="start">
+    <ion-fab-button   color="secondary" fill="outline" [routerLink]="['/book-new']">
+      <ion-icon name="create"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab vertical="bottom" horizontal="center">
+    <ion-fab-button  color="secondary" fill="outline" [routerLink]="['/delete-book']">
+      <ion-icon name="trash"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+  <ion-fab vertical="bottom" horizontal="ion-end">
+    <ion-fab-button  color="secondary" fill="outline" [routerLink]="['/delete-book']">
+      <ion-icon name="brush"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab vertical="bottom" horizontal="end">
+    <ion-fab-button color="secondary" fill="outline" [routerLink]="['/search']">
+      <ion-icon name="search"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+  </ion-footer>

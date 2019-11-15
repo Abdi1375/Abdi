@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>book-new</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label position="floating">namebook</ion-label>
+        <ion-input [(ngModel)]="namebook"  name="namebook"></ion-input>
+    
+      </ion-item>
+      <ion-item>
+          <ion-label position="floating">criterica</ion-label>
+          <ion-input [(ngModel)]="criterica"  name="criterica"></ion-input>
+      
+        </ion-item>
+      <ion-button   color="primary" (click)="laravelnewpost()"> add</ion-button>
+</ion-content>

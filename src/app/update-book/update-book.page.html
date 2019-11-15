@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>update-book</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">id</ion-label>
+    <ion-input [(ngModel)]="id"  name="id" ></ion-input>
+
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">namebook</ion-label>
+    <ion-input [(ngModel)]="namebook"  name="namebook" ></ion-input>
+
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" >criterica</ion-label>
+    <ion-input [(ngModel)]="criterica"  name="criterica" ></ion-input>
+
+  </ion-item>
+  <ion-button   color="primary" (click)="laravelupdate()"> update</ion-button>
+</ion-content>
